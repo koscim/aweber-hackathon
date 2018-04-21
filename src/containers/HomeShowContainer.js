@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../assets/dog_face.jpeg';
+import ArticleIndexContainer from './ArticlesIndexContainer';
 
 class HomeShowContainer extends Component {
   constructor(props) {
@@ -15,9 +16,10 @@ class HomeShowContainer extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Petition that!</h1>
         </header>
-        <p className="App-intro">
+        <div className="App-body">
           To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+          <ArticleIndexContainer />
+        </div>
       </div>
     )
   }
