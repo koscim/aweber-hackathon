@@ -9,7 +9,7 @@ class CauseIndexContainer extends Component {
     }
   }
 
-  componentDidMount () {
+  componentDidMount() {
     fetch(`/api/v1/causes`, {
       credentials: 'same-origin'
     })
