@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CauseIndexTile from '../components/CauseIndexTile';
 
 class CauseIndexContainer extends Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class CauseIndexContainer extends Component {
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
+}
 
   render() {
     let causes = this.state.causes.map(cause => {
@@ -36,14 +38,16 @@ class CauseIndexContainer extends Component {
           key = {cause.name}
           id = {cause.id}
           name = {cause.name}
-          image_link = {cause.image_url}
+          image_url = {cause.image_url}
         />
       )
     })
 
     return (
-      <div className="row large-up-4 small-up-2">
+      <div className="container">
+        <div className="row">
         {causes}
+        </div>
       </div>
     )
   }
