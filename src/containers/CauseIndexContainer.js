@@ -29,7 +29,6 @@ class CauseIndexContainer extends Component {
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
-}
 
   render() {
     let causes = this.state.causes.map(cause => {
