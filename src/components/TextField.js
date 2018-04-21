@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NameField = (props) => {
+const TextField = (props) => {
   return (
     <div className="form-group">
     <label>{props.label}
@@ -15,4 +15,4 @@ const NameField = (props) => {
   );
 }
 
-export default NameField;
+export default TextField;
