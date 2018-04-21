@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from '../assets/dog_face.jpeg';
-import ArticleIndexContainer from './ArticlesIndexContainer';
+import ArticlesIndexContainer from './ArticlesIndexContainer';
+import ArticleFormContainer from './ArticleFormContainer';
+import EventsIndexContainer from './EventsIndexContainer';
 
 class HomeShowContainer extends Component {
   constructor(props) {
@@ -18,7 +20,9 @@ class HomeShowContainer extends Component {
         </header>
         <div className="App-body">
           To get started, edit <code>src/App.js</code> and save to reload.
-          <ArticleIndexContainer />
+          <ArticlesIndexContainer />
+          <ArticleFormContainer />
+          <EventsIndexContainer />
         </div>
       </div>
     )
