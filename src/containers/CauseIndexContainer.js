@@ -10,7 +10,7 @@ class CauseIndexContainer extends Component {
   }
 
   componentDidMount() {
-    fetch(`/api/v1/causes`, {
+    fetch(`http://localhost:9000/api/v1/causes`, {
       credentials: 'same-origin'
     })
     .then (response => {
@@ -24,20 +24,19 @@ class CauseIndexContainer extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      let causes = body.causes
-      this.setState({causes: causes})
+      this.setState({causes: body})
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
   render() {
+    console.log(this.state)
     let causes = this.state.causes.map(cause => {
       return(
         <CauseIndexTile
           key = {cause.name}
           id = {cause.id}
           name = {cause.name}
-          image_url = {cause.image_url}
         />
       )
     })
